@@ -202,6 +202,8 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             set -e
+            #  强行注入 ubuntu 用户的 Node/PM2 环境变量路径
+            export PATH="/home/ubuntu/.nvm/versions/node/v24.16.0/bin:$PATH"
             source $HOME/.bashrc
             basedir=$HOME/yohaku
             workdir=$basedir/${{ github.run_number }}
