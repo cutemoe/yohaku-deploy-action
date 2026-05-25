@@ -151,7 +151,10 @@ jobs:
       #   uses: actions/download-artifact@v4
       #   with:
       #     name: dist
-
+#  第 1 步：先拉取你自己的部署仓库代码（这一步必须加！）
+      - name: Checkout deploy repo
+        uses: actions/checkout@v4
+        
       - name: Restore cached Build Artifacts
         id: cache-primes-restore
         uses: actions/cache/restore@v4
