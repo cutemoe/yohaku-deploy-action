@@ -1,7 +1,7 @@
 name: Build and Deploy
 
 on:
-  workflow_dispatch: # <--- 加上这一行，网页端就会出现「Run workflow」按钮！
+  workflow_dispatch: # <--- 加上这一行，网页端就会出现「Run workflow」按钮！hh
   push:
     branches:
       - main
