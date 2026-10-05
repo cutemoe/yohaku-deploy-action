@@ -1,11 +1,12 @@
 name: Build and Deploy
 
 on:
+  workflow_dispatch: # <--- 加上这一行，网页端就会出现「Run workflow」按钮！
   push:
     branches:
       - main
-  # schedule:
-  #   - cron: '0 3 * * *'
+    schedule:
+      - cron: '0 3 * * *'
   
   repository_dispatch:
     types: [trigger-workflow]
